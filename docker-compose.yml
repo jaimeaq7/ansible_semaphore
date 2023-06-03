@@ -11,6 +11,8 @@ services:
       - stack.env
     networks:
       - semaphore
+    volumes:
+      - semaphore-db:/var/lib/mysql
 
   semaphore:
     container_name: semaphore_ui
@@ -33,7 +35,9 @@ services:
       - semaphore
       - reverseproxy
 
-
+volumes:
+  semaphore-db:
+    external: true
 
 networks:
   reverseproxy:
