@@ -26,6 +26,7 @@ services:
       - semaphore
     restart: always
     volumes:
+      - semaphore-config:/etc/semaphore
       - semaphore-local-repo:/myrepo
 
   semaphore_proxy:
@@ -42,6 +43,8 @@ services:
 
 volumes:
   semaphore-db:
+    external: true
+  semaphore-config:
     external: true
   semaphore-local-repo:
     external: true
