@@ -25,6 +25,8 @@ services:
     networks:
       - semaphore
     restart: always
+    volumes:
+      - semaphore-local-repo:/myrepo
 
   semaphore_proxy:
     container_name: semaphore_proxy
@@ -40,6 +42,8 @@ services:
 
 volumes:
   semaphore-db:
+    external: true
+  semaphore-local-repo:
     external: true
 
 networks:
