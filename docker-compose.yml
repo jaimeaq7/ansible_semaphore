@@ -9,8 +9,8 @@ services:
     hostname: mysql
     env_file:
       - stack.env
-    networks:
-      - semaphore
+#    networks:
+#      - semaphore
     volumes:
       - semaphore-db:/var/lib/mysql
     restart: always
