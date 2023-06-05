@@ -30,18 +30,19 @@ services:
       - semaphore-local-repo:/myrepo
     ports:
       - 4443:443
+      - 8089:80
 
-  semaphore_proxy:
-    container_name: semaphore_proxy
-    image: ansiblesemaphore/proxy:latest
-    build:
-      context: ./proxy
-    depends_on:
-      - semaphore
+#  semaphore_proxy:
+#    container_name: semaphore_proxy
+#    image: ansiblesemaphore/proxy:latest
+#    build:
+#      context: ./proxy
+#    depends_on:
+#      - semaphore
 #    networks:
 #      - semaphore
 #      - reverseproxy
-    restart: always
+#    restart: always
 
 volumes:
   semaphore-db:
