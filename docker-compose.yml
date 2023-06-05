@@ -22,8 +22,8 @@ services:
       - mysql
     env_file:
       - stack.env
-    networks:
-      - semaphore
+ #   networks:
+ #     - semaphore
     restart: always
     volumes:
       - semaphore-config:/etc/semaphore
@@ -38,9 +38,9 @@ services:
       context: ./proxy
     depends_on:
       - semaphore
-    networks:
-      - semaphore
-      - reverseproxy
+#    networks:
+#      - semaphore
+#      - reverseproxy
     restart: always
 
 volumes:
@@ -52,7 +52,7 @@ volumes:
     external: true
 
 networks:
-  reverseproxy:
-    external: true
-  semaphore:
-    external: true
+#  reverseproxy:
+#    external: true
+#  semaphore:
+#    external: true
