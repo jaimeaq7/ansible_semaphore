@@ -51,7 +51,7 @@ volumes:
   semaphore-local-repo:
     external: true
 
-networks:
+#networks:
 #  reverseproxy:
 #    external: true
 #  semaphore:
