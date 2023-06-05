@@ -29,8 +29,7 @@ services:
       - semaphore-config:/etc/semaphore
       - semaphore-local-repo:/myrepo
     ports:
-      - 4443:443
-      - 8089:80
+      - 3000:3000
 
 #  semaphore_proxy:
 #    container_name: semaphore_proxy
